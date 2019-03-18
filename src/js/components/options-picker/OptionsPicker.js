@@ -163,7 +163,7 @@ class OptionsPicker extends Component {
 	};
 
 	toogleSaveToast = action => {
-		const isActive = action === TOAST_ACTIONS.show ? true : false;
+		const isActive = action === TOAST_ACTIONS.show;
 
 		this.setState({
 			toastActive: isActive,
