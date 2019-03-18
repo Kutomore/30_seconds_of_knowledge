@@ -13,7 +13,7 @@
 }
 
 [data-icon]:before {
-  font-family: "sok-icons" !important;
+	font-family: "sok-icons", serif !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -27,7 +27,7 @@
 
 [class^="sok-icon-"]:before,
 [class*=" sok-icon-"]:before {
-  font-family: "sok-icons" !important;
+	font-family: "sok-icons", serif !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
