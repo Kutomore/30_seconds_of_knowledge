@@ -56,9 +56,9 @@ export const SNIPPET_LIBRARY_LABELS = {
  */
 
 const SNIPPET_CODE_REGEX = {
-	html: new RegExp(/(?:\`\`\`html)(?:\s*)([\s\S.]*?)(?=\`\`\`)/, 'gm'),
-	css: new RegExp(/(?:\`\`\`css)(?:\s*)([\s\S.]*?)(?=\`\`\`)/, 'gm'),
-	js: new RegExp(/(?:\`\`\`js)(?:\s*)([\s\S.]*?)(?=\`\`\`)/, 'gm'),
+	html: new RegExp(/(?:```html)(?:\s*)([\s\S.]*?)(?=```)/, 'gm'),
+	css: new RegExp(/(?:```css)(?:\s*)([\s\S.]*?)(?=```)/, 'gm'),
+	js: new RegExp(/(?:```js)(?:\s*)([\s\S.]*?)(?=```)/, 'gm'),
 };
 
 /**

@@ -47,7 +47,8 @@
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "3.1.14",
     "write-file-webpack-plugin": "4.5.0",
-    "zip-webpack-plugin": "^3.0.0"
+    "zip-webpack-plugin": "^3.0.0",
+    "prop-types": "latest"
   },
   "eslintConfig": {
     "extends": "react-app"
