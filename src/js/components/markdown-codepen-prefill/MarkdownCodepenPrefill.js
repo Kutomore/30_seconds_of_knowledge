@@ -41,7 +41,7 @@ class MarkdownCodepenPrefill extends Component {
 	}
 
 	generateDemoMarkup = (html, css) => {
-		const source = `
+		return `
 			<html>
 				<head>
 					${css && `<style>${css}</style>`}
@@ -51,8 +51,6 @@ class MarkdownCodepenPrefill extends Component {
 				</body>
 			</html>
 		`;
-
-		return source;
 	};
 
 	renderCodepenPrefill = () => {

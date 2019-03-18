@@ -11,13 +11,8 @@ import ControllsOverlay from '../../components/controlls-overlay';
 import trashIconSrc from '../../../assets/images/icons/trash.svg';
 import emptyIconSrc from '../../../assets/images/icons/empty.svg';
 
-import {
-	restoreFromStorage,
-	restoreSnippetsFromStorage,
-	saveSnippetsToStorage,
-	openView,
-} from '../../api/storage';
-import {THEMES_VARIANTS, FONT_SIZE_CLASSNAMES} from '../../lib/consts';
+import {openView, restoreFromStorage, restoreSnippetsFromStorage, saveSnippetsToStorage,} from '../../api/storage';
+import {FONT_SIZE_CLASSNAMES, THEMES_VARIANTS} from '../../lib/consts';
 import {scrollToTop} from '../../lib/util';
 
 import './SavedTab.css';
@@ -109,7 +104,7 @@ class SavedTab extends Component {
 			);
 		}
 
-		const snippetsItems = snippets.map((snippet, index) => {
+		return snippets.map((snippet, index) => {
 			return (
 				<div key={index} className={`${CLASS}-item`}>
 					<div className={`${CLASS}-item-title`} onClick={() => openView(index)}>
@@ -117,13 +112,11 @@ class SavedTab extends Component {
 					</div>
 					{this.renderLangChip(snippet.language)}
 					<div className={`${CLASS}-item-delete`} onClick={() => this.handleSnippetDelete(snippet)}>
-						<img src={trashIconSrc} alt="Trash Button" />
+						<img src={trashIconSrc} alt="Trash Button"/>
 					</div>
 				</div>
 			);
 		});
-
-		return snippetsItems;
 	};
 
 	render() {

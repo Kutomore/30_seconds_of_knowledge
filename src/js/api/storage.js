@@ -53,13 +53,11 @@ export const DEFAULT_SAVED_SNIPPETS = ['snippets'];
  */
 
 export const saveToStorage = options => {
-	const setOptions = new Promise(resolve => {
+	return new Promise(resolve => {
 		browserObject.storage.sync.set({options}, () => {
 			resolve(true);
 		});
 	});
-
-	return setOptions;
 };
 
 /**
@@ -69,13 +67,11 @@ export const saveToStorage = options => {
  */
 
 export const restoreFromStorage = () => {
-	const getOptions = new Promise(resolve => {
+	return new Promise(resolve => {
 		browserObject.storage.sync.get(DEFAULT_EXTENSION_OPTIONS, ({options}) => {
 			resolve(options);
 		});
 	});
-
-	return getOptions;
 };
 
 /**
@@ -85,13 +81,11 @@ export const restoreFromStorage = () => {
  */
 
 export const saveSnippetsToStorage = snippets => {
-	const saveSnippet = new Promise(resolve => {
+	return new Promise(resolve => {
 		browserObject.storage.local.set({snippets}, () => {
 			resolve(true);
 		});
 	});
-
-	return saveSnippet;
 };
 
 /**
@@ -101,13 +95,11 @@ export const saveSnippetsToStorage = snippets => {
  */
 
 export const restoreSnippetsFromStorage = () => {
-	const getSnippets = new Promise(resolve => {
+	return new Promise(resolve => {
 		browserObject.storage.local.get(DEFAULT_SAVED_SNIPPETS, ({snippets}) => {
 			resolve(snippets || []);
 		});
 	});
-
-	return getSnippets;
 };
 
 /**

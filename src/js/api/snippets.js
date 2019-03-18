@@ -190,7 +190,5 @@ export const extractCodeFromSnippet = (source, lang) => {
 
 	const codes = CODE_REGEX.exec(source);
 	// The code is in the first capturing group so use codes[1]
-	const result = codes && codes.length ? codes[1] : '';
-
-	return result;
+	return codes && codes.length ? codes[1] : '';
 };

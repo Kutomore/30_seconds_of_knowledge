@@ -6,7 +6,7 @@ import _ from 'lodash';
 import Button from '../button';
 
 import env from '../../../env';
-import {openExtensionOptions, openSaved, openRandomSnippet} from '../../api/storage';
+import {openExtensionOptions, openRandomSnippet, openSaved} from '../../api/storage';
 import {SOK_ICONS} from '../sok-icon/sok_icons_reference';
 
 import './ControllsOverlay.css';
@@ -96,7 +96,7 @@ class ControllsOverlay extends Component {
 			},
 		};
 
-		const menu = _.map(MENU_ITEMS, (item, key) => {
+		return _.map(MENU_ITEMS, (item, key) => {
 			if (!item.shouldRender) {
 				return null;
 			}
@@ -119,8 +119,6 @@ class ControllsOverlay extends Component {
 				/>
 			);
 		});
-
-		return menu;
 	};
 
 	render() {
