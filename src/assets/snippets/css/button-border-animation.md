@@ -30,13 +30,13 @@ Creates a border animation on hover.
 }
 .button:before {
   border-top: 2px solid #c47135;
-  left: 0px;
+  left: 0;
   top: -5px;
 }
 .button:after {
   border-bottom: 2px solid #c47135;
   bottom: -5px;
-  right: 0px;
+  right: 0;
 }
 .button:hover {
   background-color: #c47135;

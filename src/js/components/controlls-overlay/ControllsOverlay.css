@@ -29,7 +29,7 @@
 	box-shadow: var(--drop-shadow__regular);
 	transform: scaleY(0);
 	opacity: 0;
-	transform-origin: 0% 100%;
+	transform-origin: 0 100%;
 }
 
 .sok-ControllsOverlay-menu-opened .sok-ControllsOverlay-menu-items {

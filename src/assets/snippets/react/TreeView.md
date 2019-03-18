@@ -28,7 +28,7 @@ div.tree-element:before {
 .toggler {
   position: absolute;
   top: 10px;
-  left: 0px;
+  left: 0;
   width: 0; 
   height: 0; 
   border-top: 4px solid transparent;
